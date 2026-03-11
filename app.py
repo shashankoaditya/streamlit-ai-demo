@@ -1,7 +1,8 @@
+import os
 import streamlit as st
 from openai import OpenAI
 
-client = OpenAI(api_key="YOUR_API_KEY")
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 st.title("SAP T-Code Assistant")
 
