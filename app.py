@@ -37,10 +37,18 @@ if tcode:
     output_cost = output_tokens * 0.0000006
     total_cost = input_cost + output_cost
 
-    st.subheader("API Usage")
+    # Conversion rate (approx)
+USD_TO_INR = 83
 
-    st.write(f"Input tokens: {input_tokens}")
-    st.write(f"Output tokens: {output_tokens}")
-    st.write(f"Total tokens: {total_tokens}")
+cost_in_inr = total_cost * USD_TO_INR
 
-    st.success(f"Estimated API cost: ${total_cost:.6f}")
+st.subheader("API Usage")
+
+st.write(f"Input tokens: {input_tokens}")
+st.write(f"Output tokens: {output_tokens}")
+st.write(f"Total tokens: {total_tokens}")
+
+st.success(f"Estimated API cost: ${total_cost:.6f}")
+st.success(f"Estimated API cost in INR: ₹{cost_in_inr:.4f}")
+
+    
