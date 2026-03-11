@@ -14,9 +14,7 @@ if tcode:
     prompt = f"""
     Explain SAP transaction code {tcode}.
     Include:
-    1. Purpose
-    2. SAP Module
-    3. Typical Business Use
+    Purpose
     """
 
     response = client.chat.completions.create(
