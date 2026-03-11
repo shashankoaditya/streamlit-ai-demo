@@ -12,9 +12,11 @@ tcode = st.text_input("Enter SAP T-code")
 if tcode:
 
     prompt = f"""
-    Explain SAP transaction code {tcode}.
-    Include:
-    Purpose
+    Explain SAP transaction code {tcode} in maximum 2–3 lines.
+    Mention:
+    - What the transaction does
+    - Which SAP module it belongs to
+    Keep the answer short and simple.
     """
 
     response = client.chat.completions.create(
